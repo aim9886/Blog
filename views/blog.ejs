@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head")%>
+<body>
+    <%- include('./partials/nav')%>
+    <div class="blogdata">
+        <h3><%= blog.title%></h3>
+        <p><%= blog.snippet%></p>
+        <p><%= blog.body%></p>
+        <form action="/blog/<%= blog._id%>?_method=DELETE" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" id="button">DELETE</button>
+    </form>
+    </div>
+
+    <%- include("./partials/footer")%>
+</body>
+</html>
